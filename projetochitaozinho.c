@@ -14,6 +14,8 @@ typedef struct {
 User users[MAX_USERS];
 int userCount = 0;
 
+// Cadastrar usuario
+
 void cadastrarUsuario() {
     if (userCount >= MAX_USERS) {
         printf("Limite de usuários atingido!\n");
@@ -29,6 +31,8 @@ void cadastrarUsuario() {
     users[userCount++] = newUser;
     printf("Usuário cadastrado com sucesso!\n");
 }
+
+// Alterar a senha de usuario
 
 void alterarSenha() {
     char username[USERNAME_LEN];
@@ -54,6 +58,8 @@ void alterarSenha() {
     }
 }
 
+// Login
+
 void realizarLogin() {
     char username[USERNAME_LEN];
     char password[PASSWORD_LEN];
@@ -76,6 +82,8 @@ void realizarLogin() {
         printf("Nome de usuário ou senha incorretos!\n");
     }
 }
+
+// Excluir usuario
 
 void excluirUsuario() {
     char username[USERNAME_LEN];
@@ -101,6 +109,8 @@ void excluirUsuario() {
         printf("Usuário não encontrado!\n");
     }
 }
+
+// Menu de opções
 
 int main() {
     int opcao;
